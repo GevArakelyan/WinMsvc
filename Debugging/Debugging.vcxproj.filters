@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="SysInternals01.cpp">
+      <Filter>SysInternals</Filter>
+    </ClCompile>
+    <ClCompile Include="WinInternals01.cpp">
+      <Filter>WinInternals</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Crash01.cpp">
+      <Filter>Crash Dump&amp;Hang Analysis</Filter>
+    </ClCompile>
+    <ClCompile Include="LeakSamples.cpp">
+      <Filter>Leaks</Filter>
+    </ClCompile>
+    <ClCompile Include="TTD.cpp">
+      <Filter>TTD</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Windows Debugging and Troubleshooting.txt" />
+    <ClInclude Include="Source.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CommandTree.txt" />
+    <Text Include="ErrorCodes.txt" />
+    <Text Include="Info1.txt" />
+    <Text Include="ProdDump.md" />
+    <Text Include=".Net_N136_User Mode Crash Dumps Part 2.txt" />
+    <Text Include="Windbg Commands.txt" />
+    <Text Include="sysinternals.txt">
+      <Filter>Sysinternals</Filter>
+    </Text>
+    <Text Include="CommandTree.txt">
+      <Filter>Commands</Filter>
+    </Text>
+    <Text Include="ErrorCodes.txt">
+      <Filter>Commands</Filter>
+    <Text Include="Info1.txt">
+      <Filter>MoreInfo</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{296d8fa7-d918-4537-8d5e-7f7f29e49ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SysInternals">
+      <UniqueIdentifier>{e22bb26f-ba65-4ae5-9b20-92db16996fad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinInternals">
+      <UniqueIdentifier>{e8addd37-3615-426b-a637-a24e44525420}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crash Dump&amp;Hang Analysis">
+      <UniqueIdentifier>{90a661d7-b38c-499a-a380-3903a6d940e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leaks">
+      <UniqueIdentifier>{45cd54f4-09c8-46ff-a97c-2a63a106822e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TTD">
+      <UniqueIdentifier>{a0d5da79-5876-4e9b-be83-bf0687e1ca08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Asan">
+      <UniqueIdentifier>{62d52b8c-ca72-4b80-945a-2a49970734a6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Windows Internals.txt">
+      <Filter>WinInternals</Filter>
+    </None>
+    <None Include="Readme.md" />
+  </ItemGroup>
+</Project>

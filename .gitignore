@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+<<<<<<< HEAD
+=======
+# my temporary files
+*Cpp20\Source.cpp
+>>>>>>> a0d8a63 (Fixing merge issues)
+
 # User-specific files
 *.rsuser
 *.suo
@@ -361,3 +367,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+<<<<<<< HEAD
+/Debugging/Source.cpp
+/Cpp20/Source.cpp
+=======
+Cpp20/Source.cpp
+>>>>>>> a0d8a63 (Fixing merge issues)

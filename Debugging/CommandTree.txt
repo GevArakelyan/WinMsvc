@@ -1,0 +1,8 @@
+windbg ANSI Command Tree 1.0
+title {"by HighVoice, load with .cmdtree filepath"}
+body
+{"Memory Dump"}
+ {"Plugins"}
+  {"Show"} {".chain"}
+  {"1 .Load .NET"} {".loadby sos clr"}
+  {"2 Analyze"} {"!analyze -v"}

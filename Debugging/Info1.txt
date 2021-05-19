@@ -1,0 +1,27 @@
+	From Zero To Hero With Powershell
+
+To find out what processes have been created that were not present at some point.
+
+1. Get-Process | Export-Clixml -Path good.xml
+
+	This returns all running processes.
+
+2. Compare-Object -ReferenceObject (import-clixml .\good.xml) -DifferenceObject (Get-Process) -Property name
+
+	This compares all current processes with those that have been running before.
+
+------------------
+We have also this commands in powershell.
+
+	1. Get-Process | Export-Csv -Path service.csv   || exports to csv.
+
+-------------------------------------------------------
+To put output into any file.
+	1. Get-Service | out-file -FilePath MyResult.txt
+	and to read it
+	2. get-content | MyResult.txt
+
+----------------Filtering-------------------------------------
+	1. get-process | where handles -gt 300 | sort handles
+
+

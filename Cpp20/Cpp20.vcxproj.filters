@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Algebraic_Data_Types.cpp" />
+    <ClCompile Include="Optimize_with_template.cpp" />
+    <ClCompile Include="Ranges01.cpp">
+      <Filter>Ranges</Filter>
+    </ClCompile>
+    <ClCompile Include="Ranges02.cpp">
+      <Filter>Ranges</Filter>
+    </ClCompile>
+    <ClCompile Include="Concepts.cpp">
+      <Filter>Concepts</Filter>
+    </ClCompile>
+    <ClCompile Include="Concepts02.cpp">
+      <Filter>Concepts</Filter>
+    </ClCompile>
+    <ClCompile Include="stop_token.cpp">
+      <Filter>async</Filter>
+    </ClCompile>
+    <ClCompile Include="new_synchronization_facilities.cpp">
+      <Filter>async</Filter>
+    </ClCompile>
+    <ClCompile Include="Variadic_templates01.cpp">
+      <Filter>Templates</Filter>
+    </ClCompile>
+    <ClCompile Include="Chrono_.cpp">
+      <Filter>Chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="Time_Zones01.cpp">
+      <Filter>Chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>somethingelse</Filter>
+    </ClCompile>
+    <ClCompile Include="atomics01.cpp">
+      <Filter>async</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="coroutine01.h">
+      <Filter>Coroutines</Filter>
+    </ClInclude>
+    <ClInclude Include="cppcoro01.h">
+      <Filter>Coroutines</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cppcoro01.h">
+      <Filter>cppcoro_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="coroutine01.h">
+      <Filter>coroutines</Filter>
+    </ClInclude>
+    <None Include="Index_sequence.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Concepts">
+      <UniqueIdentifier>{f6fee4a1-8fd3-4004-827a-252acec0d7f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ranges">
+      <UniqueIdentifier>{375d80d0-5455-43cc-853d-d3577388d71d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="async">
+      <UniqueIdentifier>{06a43c10-7d90-4984-abeb-722fdee27348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coroutines">
+      <UniqueIdentifier>{7c275d65-a7fe-4124-917e-6a168fd0eee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chrono">
+      <UniqueIdentifier>{e7d3aa12-eaa8-4e0d-a2d0-98e72d0a2e21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Templates">
+      <UniqueIdentifier>{6af3635b-4d3f-466c-a800-db4d586d3cd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="somethingelse">
+      <UniqueIdentifier>{a20731e6-3910-4636-98b9-718f28be0f47}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

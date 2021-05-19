@@ -1,0 +1,20 @@
+
+https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/bp--bu--bm--set-breakpoint-
+	bp vs bu
+Breakpoints that you set with bp are not saved in WinDbg workspaces.
+Breakpoints that are set with bu are saved in workspaces.
+---------------------------------
+			bm usage
+
+example.
+	0:000> bm myprogram!mem* 
+	4: 0040d070 MyProgram!memcpy
+	5: 0040c560 MyProgram!memmove
+	6: 00408960 MyProgram!memset
+
+----------------------------------------------
+If you specify Thread, breakpoints are set on the specified threads.
+For example, the ~*bp command sets breakpoints on all threads,
+~#bp sets a breakpoint on the thread that causes the current exception,
+and ~123bp sets a breakpoint on thread 123.
+The ~bp and ~.bp commands both set a breakpoint on the current thread.

@@ -1,0 +1,15 @@
+﻿page 32--------------------------------------------------
+
+Starting with Windows 8, a sandbox called an AppContainer is used to host Windows Apps, which
+provides isolation with relation to other AppContainers and non–Windows Apps processes. Code in
+AppContainers can communicate with brokers (non-isolated processes running with the user’s credentials)
+and sometimes other AppContainers or processes through well-defined contracts provided by the
+Windows Runtime. A canonical example is the Microsoft Edge browser that runs inside an AppContainer
+and thus provides better protection against malicious code running within its boundaries. Additionally,
+third-party developers can leverage AppContainers to isolate their own non–Windows Apps applications
+in similar ways. The AppContainer model forces a significant shift in traditional programming
+paradigms, moving from the traditional multithreaded single-process application implementation to
+a multi-process one.
+--------------------------------------------------
+
+

@@ -1,0 +1,43 @@
+/*
+		Top debugger commands that will help you to gain more info about running app.
+
+---------------------------------------------------------------------------
+Windows Debugging and Troubleshooting https://www.youtube.com/watch?v=2rGS5fYGtJ4
+windbg notepad
+qd   | to detach then quit(this means app will not be closed.)
+lm | list modules
+lm v m malware | show verbose for module named malware.
+du address | show as unicode 
+eu "newvalue" | edit as unicode.
+dc address | display as ascii.
+
+---------------------------------------------------------------------------
+!peb  | shows laoded modules, environment variables, command line args, and more...
+
+.hh k | will show hellp for k command. ( k is showing call stack.)
+
+!runaway | shows quanta of each thread. run when have high cpu issue.
+
+| will show commandline.
+
+~ will show pid and tid. ~Ns switches the active thread to thread N.
+
+~*k to see all stacks.
+---------Performance tools-------------------------------------------
+Find when wmplayer is consuming 10% of some cpu for 5 seconds.
+
+	procdump -c 10 -s 5 -u wmplayer.
+
+-----------------------------------------
+ .Net related.
+
+	!syncblk find outstanding syncblocks on which other threads are waiting.
+
+	Another common commands for hangs.
+	!finalizequeue from psscorX lists objects registered for finalization.
+
+	!threads is one way to find handgs.
+-----------------------------------------
+
+
+*/

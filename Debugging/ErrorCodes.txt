@@ -1,0 +1,10 @@
+dv   | will display local variables.
+
+!error error_code | will show error code description.
+
+!gle | stands for get last error
+
+r | shows registers
+
+look at eax because it's a function return address.
+!error @eax
