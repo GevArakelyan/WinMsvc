@@ -1,0 +1,27 @@
+https://docs.microsoft.com/en-us/sysinternals/downloads/procdump
+
+
+			ProcDump
+
+procdump -e 1 -f "" -w MyApp
+
+will show you exceptions that got thrown.
+1 is for thrown exceptions.
+-e 1 means first chance exceptions. -e only will show only unhandled (means last chance).
+
+-f "" | f is for filter. when empty means all.
+-f 171 | for exception with code 171
+-w | for waiting.
+you can specify dump location with -x c:\dumps args.
+
+
+
+
+procdump -i | will register it for creating crash dump when processes will crash.
+
+procdump -c 20 cpustres c:\dumps || will create dmp file if cpu usage will exeed 20% for some time (10s I guess)
+procdump -c 20 -u cpustres c:\dumps | same as above except will treat cpu usage relative to a single core
+
+
+Defrag-Tools-180-Active-Memory-Dump : https://channel9.msdn.com/Shows/Defrag-Tools/Defrag-Tools-180-Active-Memory-Dump?term=dump%20file%20debugging&lang-en=true
+

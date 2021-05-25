@@ -11,9 +11,4 @@ Programm monitoring fixing crashes finding perf problems
 ctrl+r will revert filters.
 ctrl+t will open process Tree
 
-			ProcDump
-
-procdump -i | will register it for creating crash dump when processes will crash.
-
-procdump -c 20 cpustres c:\dumps || will create dmp file if cpu usage will exeed 20% for some time (10s I guess)
 

@@ -157,7 +157,9 @@
     <ClInclude Include="Windows Debugging and Troubleshooting.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="ProdDump.txt" />
     <Text Include="sysinternals.txt" />
+    <Text Include=".Net_N136_User Mode Crash Dumps Part 2.txt" />
     <Text Include="Windbg Commands.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

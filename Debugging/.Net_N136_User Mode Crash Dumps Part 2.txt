@@ -1,0 +1,33 @@
+https://channel9.msdn.com/Shows/Defrag-Tools/DefragTools-136-Debugging-User-Mode-Crash-Dumps-Part-2?term=dump%20file%20debugging&lang-en=true&pageSize=15&skip=15
+
+For .Net open crash dump. Windows store app.
+
+!pde.err
+
+.err -1
+
+!analyze -v
+
+!pde.dse display stored exception
+
+.lastevent
+
+~. | will see current thread
+
+.cls  | clear as in cmd
+
+!dpx
+!dse
+.formats 0x53453032 | will print many representations of it.
+
+!dpx -du | 
+
+~~[TID]s | to go to thread with TID where TID is thread Id in structure{ PID.TID }
+~2s | will go to second thread in list that you can view with ~ command.
+
+
+
+--------------------------------------------------
+
+
+

@@ -7,7 +7,9 @@ windbg notepad
 qd   | to detach then quit(this means app will not be closed.)
 lm | list modules
 lm v m malware | show verbose for module named malware.
-
+du address | show as unicode 
+eu "newvalue" | edit as unicode.
+dc address | display as ascii.
 
 ---------------------------------------------------------------------------
 !peb  | shows laoded modules, environment variables, command line args, and more...
