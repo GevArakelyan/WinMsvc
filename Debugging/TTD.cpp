@@ -47,7 +47,7 @@ auto InitPtr(int x)
 
 
 //int main_harder_crash()
-int main()
+int main__harder_crash()
 {
 
 	int x{0};
@@ -62,7 +62,14 @@ int main()
 	return 0;
 }
 
-
+int main()
+{
+	std::mutex m;
+	std::lock_guard lock(m);
+	std::cout << "done";
+	std::this_thread::sleep_for(std::chrono::seconds(2));
+	return 0;
+}
 
 
 

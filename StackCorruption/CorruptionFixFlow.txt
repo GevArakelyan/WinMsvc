@@ -1,0 +1,26 @@
+https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-walkthrough
+https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/windbg-timeline-preview
+
+
+C:\repos\Win\WinMsvc\x64\Debug\StackCorruption.exe
+
+		Configure the WinDbg Environment
+
+Add your local symbol location to the symbol path and reload the symbols, by typing the following commands
+.sympath+ C:\repos\Win\WinMsvc\Debug\
+.reload
+
+Add your local code location to the source path by typing the following command.
+.srcpath+ C:\repos\Win\WinMsvc\StackCorruption
+
+
+Determine function address
+dx &DisplayGreeting!GetCppConGreeting
+
+
+
+https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/bp--bu--bm--set-breakpoint-
+
+
+
+https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/processor-breakpoints---ba-breakpoints-

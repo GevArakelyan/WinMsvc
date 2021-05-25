@@ -1,0 +1,19 @@
+
+	To look how much time task took it's easy to use below in cmd
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
+New Strings Value | name it Autorun and for value use { prompt $T $B $P$G}
+
+
+Programm monitoring fixing crashes finding perf problems
+
+	https://channel9.msdn.com/events/ignite/2015/brk3316
+	Process Monitor { shows many usefull information like registries, process and threads, I/O}
+ctrl+r will revert filters.
+ctrl+t will open process Tree
+
+			ProcDump
+
+procdump -i | will register it for creating crash dump when processes will crash.
+
+procdump -c 20 cpustres c:\dumps || will create dmp file if cpu usage will exeed 20% for some time (10s I guess)
+
