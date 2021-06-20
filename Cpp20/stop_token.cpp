@@ -3,49 +3,95 @@
 #include <condition_variable>
 #include <queue>
 #include <iostream>
+#include <format>
 
+using namespace std;
 namespace
 {
-	class Data
+
+	struct Employee
 	{
-		int d;
+		int Id;
 	};
+	std::ostream& operator<<(std::ostream& ostream, const Employee& employee)
+	{
+		ostream << std::format("Employee had id=={}", employee.Id);
+		return ostream;
+	}
 
 	std::mutex key;
 	std::condition_variable_any cv;
-	std::queue<Data> q;
+	std::queue<Employee> q;
 
 	class op_was_canceled
 	{
 	};
 
-	Data wait_for_data(std::stop_token st)
+	Employee wait_for_new_employee(std::stop_token st)
 	{
 		std::unique_lock lock(key);
 
-		if (!cv.wait(lock, st, []
-		{
-			return !q.empty();
-		}))
+		if (!cv.wait(lock, st, [] { return !q.empty(); }))
 		{
 			throw op_was_canceled();
 		}
-		Data res = q.front();
+
+		Employee res = q.front();
 		q.pop();
 		return res;
 	}
+
+	void present_new_employees(std::stop_token st)
+	{
+		while (true)
+		{
+			std::this_thread::sleep_for(3s);
+			auto Emp = wait_for_new_employee(st);
+			std::cout << Emp;
+		}
+	}
+}
+
+int main()
+{
+
+	std::jthread Worker(present_new_employees);
+
+
+	int Id{};
+	while (true)
+	{
+		std::cin >> Id;
+		if (Id < 0)
+		{
+			Worker.request_stop();
+			Worker.join();
+			break;
+		}
+		if (Id > 0)
+		{
+			std::unique_lock lock(key);
+			std::this_thread::sleep_for(3s);
+			q.emplace(Id);
+		}
+		else if (Id == 0)
+		{
+			cv.notify_all();
+		}
+	}
+	return 0;
 }
 
 namespace
 {
-	Data read_data(int handle)
+	Employee read_data(int handle)
 	{
 		using namespace std::chrono_literals;
 		std::this_thread::sleep_for(10s);
-		return Data{};
+		return Employee{};
 	}
 
-	Data read_file(std::stop_token st, std::filesystem::path filename)
+	Employee read_file(std::stop_token st, std::filesystem::path filename)
 	{
 		auto handle = 1;//open_file(filename);
 
@@ -62,7 +108,7 @@ namespace
 
 		threadid = std::this_thread::get_id();
 		std::cout << "called from  thread" << threadid;
-		return Data{};
+		return Employee{};
 	}
 }
 
