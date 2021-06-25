@@ -20,7 +20,7 @@ int main()
 
     wprintf(L"%ls\n", greeting.data());
     wprintf(L"%ls\n", greeting.data());
-    wprintf(L"%ls\n", greeting.data());
+    wprintf(L"%ss\n", greeting.data());
 
     return 0;
 }
