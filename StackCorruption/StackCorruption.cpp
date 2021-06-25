@@ -15,9 +15,11 @@ void GetCppConGreeting(wchar_t* buffer, size_t size)
 
 int main()
 {
-    std::array <wchar_t, 30> greeting{};
+    std::array <wchar_t, 76> greeting{};
     GetCppConGreeting(greeting.data(), sizeof(greeting));
 
+    wprintf(L"%ls\n", greeting.data());
+    wprintf(L"%ls\n", greeting.data());
     wprintf(L"%ls\n", greeting.data());
 
     return 0;
