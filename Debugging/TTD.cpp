@@ -84,6 +84,7 @@ int main__harder_crash()
 
 	ba w 8 address | go back
 
+	To see all locations where we write to some 8 byte memory
 	dx -g @$cursession.TTD.Memory(Address1,Address1+8, "w")
 
 

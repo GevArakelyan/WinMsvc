@@ -157,16 +157,19 @@
     <ClCompile Include="Ranges01.cpp" />
     <ClCompile Include="Ranges02.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Time_Zones02.cpp" />
     <ClCompile Include="Variadic_templates01.cpp" />
     <ClCompile Include="stop_token.cpp" />
     <ClCompile Include="Time_Zones01.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Index_sequence.cpp" />
+    <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="coroutine01.h" />
     <ClInclude Include="cppcoro01.h" />
+    <ClInclude Include="Source.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

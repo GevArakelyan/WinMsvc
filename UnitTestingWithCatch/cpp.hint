@@ -1,0 +1,22 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define TEST_CASE(__VA_ARGS__) INTERNAL_CATCH_TESTCASE( __VA_ARGS__ )
+#define TEST_CASE(__VA_ARGS__) INTERNAL_CATCH_TESTCASE_NO_REGISTRATION(INTERNAL_CATCH_UNIQUE_NAME( CATCH2_INTERNAL_TEST_ ), __VA_ARGS__)
+#define BENCHMARK(__VA_ARGS__) INTERNAL_CATCH_BENCHMARK(INTERNAL_CATCH_UNIQUE_NAME(CATCH2_INTERNAL_BENCHMARK_), INTERNAL_CATCH_GET_1_ARG(__VA_ARGS__,,), INTERNAL_CATCH_GET_2_ARG(__VA_ARGS__,,))
+#define REQUIRE(__VA_ARGS__) INTERNAL_CATCH_TEST( "REQUIRE", Catch::ResultDisposition::Normal, __VA_ARGS__ )
+#define REQUIRE(__VA_ARGS__) (void)(0)
+#define CHECK_THAT(arg, matcher) INTERNAL_CHECK_THAT( "CHECK_THAT", matcher, Catch::ResultDisposition::ContinueOnFailure, arg )
+#define CHECK_THAT(arg, matcher) (void)(0)
+#define CATCH_REGISTER_TAG_ALIAS(alias, spec) CATCH_INTERNAL_START_WARNINGS_SUPPRESSION CATCH_INTERNAL_SUPPRESS_GLOBALS_WARNINGS namespace{ Catch::RegistrarForTagAliases INTERNAL_CATCH_UNIQUE_NAME( AutoRegisterTagAlias )( alias, spec, CATCH_INTERNAL_LINEINFO ); } CATCH_INTERNAL_STOP_WARNINGS_SUPPRESSION
+#define REQUIRE_THAT(arg, matcher) INTERNAL_CHECK_THAT( "REQUIRE_THAT", matcher, Catch::ResultDisposition::Normal, arg )
+#define REQUIRE_THAT(arg, matcher) (void)(0)
+#define REQUIRE_THROWS_WITH(expr, matcher) INTERNAL_CATCH_THROWS_STR_MATCHES( "REQUIRE_THROWS_WITH", Catch::ResultDisposition::Normal, matcher, expr )
+#define REQUIRE_THROWS_WITH(expr, matcher) (void)(0)
+#define CATCH_TRANSLATE_EXCEPTION(signature) INTERNAL_CATCH_TRANSLATE_EXCEPTION( signature )
+#define CATCH_TRANSLATE_EXCEPTION(signature) INTERNAL_CATCH_TRANSLATE_EXCEPTION_NO_REG( INTERNAL_CATCH_UNIQUE_NAME( catch_internal_ExceptionTranslator ), signature )
+#define GENERATE(__VA_ARGS__) Catch::Generators::generate( INTERNAL_CATCH_STRINGIZE(INTERNAL_CATCH_UNIQUE_NAME(generator)), CATCH_INTERNAL_LINEINFO, [ ]{ using namespace Catch::Generators; return makeGenerators( __VA_ARGS__ ); } )
+#define TEMPLATE_TEST_CASE(__VA_ARGS__) INTERNAL_CATCH_TEMPLATE_TEST_CASE( __VA_ARGS__ )
+#define TEMPLATE_TEST_CASE(__VA_ARGS__) INTERNAL_CATCH_EXPAND_VARGS( INTERNAL_CATCH_TEMPLATE_TEST_CASE( __VA_ARGS__ ) )
+#define TEMPLATE_TEST_CASE(__VA_ARGS__) INTERNAL_CATCH_TEMPLATE_TEST_CASE_NO_REGISTRATION(__VA_ARGS__)
+#define TEMPLATE_TEST_CASE(__VA_ARGS__) INTERNAL_CATCH_EXPAND_VARGS( INTERNAL_CATCH_TEMPLATE_TEST_CASE_NO_REGISTRATION(__VA_ARGS__) )

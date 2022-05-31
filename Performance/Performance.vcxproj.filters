@@ -32,13 +32,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Links.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="ArtOfWritingEfficientPrograms.md">
       <Filter>Intrinsics</Filter>
     </None>
+    <None Include="..\..\ComHelpers\ComSample1\Readme.md" />
   </ItemGroup>
 </Project>

@@ -146,9 +146,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Links.txt" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="..\..\ComHelpers\ComSample1\Readme.md" />
     <None Include="ArtOfWritingEfficientPrograms.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
