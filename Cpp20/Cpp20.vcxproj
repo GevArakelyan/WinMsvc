@@ -120,6 +120,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,12 +153,14 @@
     <ClCompile Include="Chrono_.cpp" />
     <ClCompile Include="Concepts.cpp" />
     <ClCompile Include="Concepts02.cpp" />
+    <ClCompile Include="format\format-1.cpp" />
     <ClCompile Include="new_synchronization_facilities.cpp" />
     <ClCompile Include="Optimize_with_template.cpp" />
     <ClCompile Include="Ranges01.cpp" />
     <ClCompile Include="Ranges02.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Time_Zones02.cpp" />
+    <ClCompile Include="Time_Zones03.cpp" />
     <ClCompile Include="Variadic_templates01.cpp" />
     <ClCompile Include="stop_token.cpp" />
     <ClCompile Include="Time_Zones01.cpp" />

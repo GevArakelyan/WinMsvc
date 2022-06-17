@@ -38,7 +38,7 @@ void printStartEndTimes(const local_days& localDays,
 }
 
 
-int main(int argc, char* argv[])
+int main_timezones02(int argc, char* argv[])
 {
 	using namespace std::string_literals;
 

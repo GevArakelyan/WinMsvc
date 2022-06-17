@@ -36,6 +36,10 @@
     <ClCompile Include="Time_Zones02.cpp">
       <Filter>Chrono</Filter>
     </ClCompile>
+    <ClCompile Include="Time_Zones03.cpp">
+      <Filter>Chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="format\format-1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="coroutine01.h">

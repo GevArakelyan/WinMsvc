@@ -23,7 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{5aa800ea-61f8-4227-a878-af86b90b171b}</ProjectGuid>
     <RootNamespace>Debugging</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -126,6 +126,8 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,29 +154,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="asan\Asan1.cpp" />
     <ClCompile Include="Crash01.cpp" />
-    <ClCompile Include="LeakSamples.cpp" />
+    <ClCompile Include="WinInternals\LeakSamples.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="SysInternals01.cpp" />
-    <ClCompile Include="TTD.cpp" />
-    <ClCompile Include="WinInternals01.cpp" />
+    <ClCompile Include="ttd\ttd.cpp" />
+    <ClCompile Include="WinInternals\WinInternals01.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source.h" />
-    <ClInclude Include="Windows Debugging and Troubleshooting.txt" />
+    <ClInclude Include="WindbgHot\Windows Debugging and Troubleshooting.txt" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CommandTree.txt" />
-    <Text Include="ErrorCodes.txt" />
+    <Text Include="WindbgHot\ErrorCodes.txt" />
     <Text Include="Info1.txt" />
-    <Text Include="ProdDump.txt" />
-    <Text Include="sysinternals.txt" />
     <Text Include=".Net_N136_User Mode Crash Dumps Part 2.txt" />
-    <Text Include="Windbg Commands.txt" />
+    <Text Include="WindbgHot\Hot1.md" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="WindbgHot\HotLinks.md" />
+    <None Include="WindbgHot\Kernel101.md" />
+    <None Include="WindbgHot\Registers.md" />
+    <None Include="ProcDump\ProdDump.md" />
     <None Include="Readme.md" />
-    <None Include="Windows Internals.txt" />
+    <None Include="WinInternals\Windows Internals.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
